@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_top"
+        android:icon="@drawable/ic_top"
+        android:title="@string/filter_top" />
+    <item
+        android:id="@+id/menu_new"
+        android:icon="@drawable/ic_new"
+        android:title="@string/filter_new" />
+    <item
+        android:id="@+id/menu_best"
+        android:icon="@drawable/ic_best"
+        android:title="@string/filter_best" />
+    <item
+        android:id="@+id/menu_ask"
+        android:icon="@drawable/ic_ask"
+        android:title="@string/filter_ask" />
+    <item
+        android:id="@+id/menu_show"
+        android:icon="@drawable/ic_show"
+        android:title="@string/filter_show" />
+    <item
+        android:id="@+id/menu_job"
+        android:icon="@drawable/ic_job"
+        android:title="@string/filter_job" />
+</menu>

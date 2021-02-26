@@ -4,4 +4,13 @@
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="subforums">Filter</string>
+    <string name="settings">Settings</string>
+
+    <!-- Filters -->
+    <string name="filter_top">Top Stories</string>
+    <string name="filter_best">Best Stories</string>
+    <string name="filter_new">New Stories</string>
+    <string name="filter_ask">Ask HN</string>
+    <string name="filter_show">Show HN</string>
+    <string name="filter_job">Jobs</string>
 </resources>
