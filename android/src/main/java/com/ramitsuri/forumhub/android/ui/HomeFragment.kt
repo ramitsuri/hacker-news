@@ -1,20 +1,14 @@
 package com.ramitsuri.forumhub.android.ui
 
-import android.annotation.SuppressLint
-import android.graphics.drawable.InsetDrawable
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.MenuRes
-import androidx.appcompat.view.menu.MenuBuilder
-import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.ramitsuri.forumhub.android.R
 import com.ramitsuri.forumhub.android.databinding.FragmentHomeBinding
+import com.ramitsuri.forumhub.android.util.showPopupMenu
 import com.ramitsuri.forumhub.android.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
@@ -51,7 +45,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun showFilter() {
-        showMenu(binding.txtFilter, R.menu.menu_filter) { menuItem ->
+        context?.showPopupMenu(binding.txtFilter, R.menu.menu_filter) { menuItem ->
             when (menuItem.itemId) {
                 R.id.menu_top -> {
                     binding.txtFilter.text = getString(R.string.filter_top)
@@ -75,42 +69,6 @@ class HomeFragment : Fragment() {
 
                 }
             }
-            true
         }
     }
-
-    @SuppressLint("RestrictedApi")
-    @Suppress("SameParameterValue")
-    private fun showMenu(v: View, @MenuRes menuRes: Int, itemClick: (MenuItem) -> Boolean) {
-        context?.let { context ->
-            val popup = PopupMenu(context, v)
-            popup.menuInflater.inflate(menuRes, popup.menu)
-
-            popup.setOnMenuItemClickListener { menuItem: MenuItem ->
-                itemClick(menuItem)
-            }
-            val menuBuilder = popup.menu
-            if (menuBuilder is MenuBuilder) {
-                menuBuilder.setOptionalIconsVisible(true)
-                for (item in menuBuilder.visibleItems) {
-                    val iconMarginPx =
-                        TypedValue.applyDimension(
-                            TypedValue.COMPLEX_UNIT_DIP,
-                            16.toFloat(),
-                            resources.displayMetrics
-                        )
-                            .toInt()
-                    if (item.icon != null) {
-                        item.icon = InsetDrawable(item.icon, iconMarginPx, 0, iconMarginPx, 0)
-                    }
-                }
-            }
-            popup.show()
-        }
-    }
-
-    companion object {
-        fun newInstance() = HomeFragment()
-    }
-
 }
