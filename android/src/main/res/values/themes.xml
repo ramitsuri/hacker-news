@@ -20,7 +20,6 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
-        <item name="actionOverflowMenuStyle">@style/MyOverflowButtonStyle</item>
     </style>
     <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
         <item name="android:tint">@color/text</item>
