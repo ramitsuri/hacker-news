@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/story_icon_size"
+        android:layout_height="@dimen/story_icon_size"
+        app:layout_constraintBottom_toTopOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/start"
+        app:layout_constraintTop_toTopOf="@id/top" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtHost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="@id/top"
+        tools:text="ycombinator.com" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="@id/txtHost"
+        app:layout_constraintTop_toBottomOf="@id/txtHost"
+        tools:text="12 minutes ago" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="@id/txtDetail1"
+        app:layout_constraintStart_toEndOf="@id/txtDetail1"
+        app:layout_constraintTop_toTopOf="@id/txtDetail1"
+        tools:text="•" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintStart_toEndOf="@id/divider1"
+        app:layout_constraintTop_toTopOf="@id/txtDetail1"
+        tools:text="Author" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="@id/txtDetail1"
+        app:layout_constraintTop_toBottomOf="@id/txtDetail1"
+        tools:text="129 points" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="@id/txtDetail3"
+        app:layout_constraintStart_toEndOf="@id/txtDetail3"
+        app:layout_constraintTop_toTopOf="@id/txtDetail3"
+        tools:text="•" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintStart_toEndOf="@id/divider2"
+        app:layout_constraintTop_toTopOf="@id/txtDetail3"
+        tools:text="12 comments" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintStart_toStartOf="@id/start"
+        app:layout_constraintTop_toBottomOf="@id/txtDetail3"
+        tools:text="WSL Hello Sudo: Face Recognition of Windows Hello on Windows Subsystem for Linux" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

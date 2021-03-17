@@ -1,4 +1,4 @@
-package com.ramitsuri.forumhub.android.ui
+package com.ramitsuri.forumhub.android.ui.details
 
 import android.os.Bundle
 import android.view.LayoutInflater

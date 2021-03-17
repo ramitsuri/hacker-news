@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/toolbar"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/story_icon_size"
+        android:layout_height="@dimen/story_icon_size"
+        app:layout_constraintStart_toStartOf="@id/start"
+        app:layout_constraintTop_toTopOf="@id/top" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/txtHost"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="@id/icon"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="WSL Hello Sudo: Face Recognition of Windows Hello on Windows Subsystem for Linux" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtHost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/icon"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        tools:text="(YCombinator.com)" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableTint="?attr/colorControlNormal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/btnBrowser"
+        app:layout_constraintStart_toStartOf="@id/start"
+        app:layout_constraintTop_toTopOf="@id/btnBrowser"
+        tools:drawableStart="@drawable/ic_time"
+        tools:text="12m" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="•"
+        app:layout_constraintBottom_toBottomOf="@id/txtDetail1"
+        app:layout_constraintStart_toEndOf="@id/txtDetail1"
+        app:layout_constraintTop_toTopOf="@id/txtDetail1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableTint="?attr/colorControlNormal"
+        app:layout_constraintStart_toEndOf="@id/divider1"
+        app:layout_constraintTop_toTopOf="@id/txtDetail1"
+        tools:drawableStart="@drawable/ic_author"
+        tools:text="sramesh" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="•"
+        app:layout_constraintBottom_toBottomOf="@id/txtDetail2"
+        app:layout_constraintStart_toEndOf="@id/txtDetail2"
+        app:layout_constraintTop_toTopOf="@id/txtDetail2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableTint="?attr/colorControlNormal"
+        app:layout_constraintStart_toEndOf="@id/divider2"
+        app:layout_constraintTop_toTopOf="@id/txtDetail1"
+        tools:drawableStart="@drawable/ic_score"
+        tools:text="129" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="•"
+        app:layout_constraintBottom_toBottomOf="@id/txtDetail3"
+        app:layout_constraintStart_toEndOf="@id/txtDetail3"
+        app:layout_constraintTop_toTopOf="@id/txtDetail3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDetail4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableTint="?attr/colorControlNormal"
+        app:layout_constraintStart_toEndOf="@id/divider3"
+        app:layout_constraintTop_toTopOf="@id/txtDetail1"
+        tools:drawableStart="@drawable/ic_comments"
+        tools:text="12" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBrowser"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:tooltipText="@string/open_in_browser"
+        app:backgroundTint="@android:color/transparent"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_browser"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="16dp"
+        app:iconTint="?attr/colorControlNormal"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

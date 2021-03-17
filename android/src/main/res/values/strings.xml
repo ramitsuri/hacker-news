@@ -13,4 +13,7 @@
     <string name="filter_ask">Ask HN</string>
     <string name="filter_show">Show HN</string>
     <string name="filter_job">Jobs</string>
+
+    <!-- Story Item -->
+    <string name="open_in_browser">Open in browser</string>
 </resources>
